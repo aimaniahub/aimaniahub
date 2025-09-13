@@ -1,47 +1,37 @@
-// profile-readme-generator.js
-const fs = require("fs");
-const fetch = require("node-fetch");
+# Hi — I'm Sumanth Prasad T M 👋
 
-const USERNAME = "aimaniahub";
+![Profile Views](https://komarev.com/ghpvc/?username=aimaniahub&label=Profile%20views&color=0e75b6&style=flat)
 
-async function generateReadme() {
-  // Fetch repos
-  const reposRes = await fetch(`https://api.github.com/users/${USERNAME}/repos?sort=updated&per_page=6`);
-  const repos = await reposRes.json();
-
-  let projectsMarkdown = repos
-    .map(
-      (repo) => `- [**${repo.name}**](${repo.html_url}) → ${repo.description || "No description"}`
-    )
-    .join("\n");
-
-  // Profile Template
-  const content = `# Hi there, I'm Sumanth Prasad T M 👋
-
-![Profile Views](https://komarev.com/ghpvc/?username=${USERNAME}&label=Profile%20views&color=0e75b6&style=flat)
-
-Motivated **Data Analyst** specializing in statistical analysis and visualization.
+Motivated **Data Analyst** working on AI-driven data tools, trading algorithms, and full-stack prototypes.  
+Python | SQL | Pandas | Scikit-learn | Next.js | React | Node.js
 
 ---
 
 ## 📊 GitHub Stats
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=${USERNAME}&show_icons=true&theme=radical" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=${USERNAME}&layout=compact&theme=radical" />
+  <img alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=aimaniahub&show_icons=true&theme=radical&hide_border=true" />
+  <img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aimaniahub&layout=compact&theme=radical&hide_border=true" />
 </p>
 
 ---
 
 ## 🔥 Featured Projects
-${projectsMarkdown}
+- [Synthara](https://github.com/aimaniahub/Synthara) — Intelligent dataset generation pipeline (NLP → CSV / SSE UI).
+- [option-chain-analyser-fyers-](https://github.com/aimaniahub/option-chain-analyser-fyers-) — Options analytics with Fyers API and AI.
+- [Blockchain_AI_fraud-_detection](https://github.com/aimaniahub/Blockchain_AI_fraud-_detection) — ML for blockchain fraud detection.
+- [nextjs-ai-chatbot](https://github.com/aimaniahub/nextjs-ai-chatbot) — AI chatbot in Next.js.
+- [musicgen_frontend](https://github.com/aimaniahub/musicgen_frontend) — Frontend UI for MusicGen projects.
+(See full repo list on my profile.)
 
 ---
 
-⭐ *Auto-generated profile README*  
-`;
+## 🛠 Skills
+Python • SQL • Data Visualization • Machine Learning • Next.js • React • Docker • Git
 
-  fs.writeFileSync("README.md", content);
-  console.log("✅ README.md generated!");
-}
+---
 
-generateReadme();
+## 📫 Contact
+- Email: prasadsumanth8@gmail.com  
+- LinkedIn: https://in.linkedin.com/in/sumanth-prasad-tm-74291927b
+
+_Last updated: YYYY-MM-DD_
